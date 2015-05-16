@@ -13,3 +13,4 @@ version          '0.1.5'
 
 depends          'yum'
 depends          'apt'
+depends 'packagecloud', '~> 0.0.17'
