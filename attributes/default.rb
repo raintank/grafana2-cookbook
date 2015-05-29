@@ -91,4 +91,4 @@ default['grafana']['graphite_host'] = 'localhost'
 default['grafana']['graphite_port'] = 8888
 default['grafana']['elasticsearch_host'] = 'localhost'
 # TODO: there *has* to be a better way to specify this path.
-default['grafana']['litmus_path'] = '/go/src/github.com/grafana/grafana/public/plugins/raintank/dashboards/litmus'
+default['grafana']['litmus_path'] = '/usr/share/grafana/public/plugins/raintank/dashboards/litmus'
