@@ -1,5 +1,13 @@
 # Revision History for grafana2
 
+## 0.1.7
+- Rick Crelia <rick.crelia@nordstrom.com>
+- Fix for grafana.ini template
+
+## 0.1.6
+- Nathan Haneysmith <nathan.haneysmith@nordstrom.com>
+- Updating metadata to point to github repo
+
 ## 0.1.5
 - Nathan Haneysmith <nathan.haneysmith@nordstrom.com>
 - Swap to sqlite3 by default, fix ubuntu support
