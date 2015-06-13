@@ -53,6 +53,25 @@ default['grafana']['anon_enabled'] = 'true' # 'true' or 'false'
 default['grafana']['org_name'] = 'Main Org.'
 default['grafana']['org_role'] = 'Viewer'
 
+### AUTH.PROXY ###
+default['grafana']['auth_proxy']['enabled'] = false
+default['grafana']['auth_proxy']['header_name'] = 'X-WEBAUTH-USER'
+default['grafana']['auth_proxy']['header_property'] = 'username'
+default['grafana']['auth_proxy']['auto_sign_up'] = true
+
+### SMTP ###
+default['grafana']['smtp']['enabled'] = false
+default['grafana']['smtp']['host'] = ''
+default['grafana']['smtp']['user'] = ''
+default['grafana']['smtp']['password'] = ''
+default['grafana']['smtp']['cert_file'] = ''
+default['grafana']['smtp']['key_file'] = ''
+default['grafana']['smtp']['skip_verify'] = false
+default['grafana']['smtp']['from_address'] = 'admin@grafana.localhost'
+
+### EMAIL ###
+default['grafana']['email']['welcome_email'] = false
+
 ### SESSION ###
 default['grafana']['session_type'] = 'memory' # Either 'memory', 'file', 'mysql', or 'postgres'
 # default['grafana']['session_type'] = 'mysql' # Either 'memory', 'file', 'mysql', or 'postgres'

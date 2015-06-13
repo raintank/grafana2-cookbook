@@ -174,6 +174,27 @@ allowed_domains = <%= node['grafana']['auth_google_allowed_domains'].join ' ' %>
 <% end %>
 <% end %>
 
+#################################### Auth Proxy ##########################
+[auth.proxy]
+enabled = <%= node['grafana']['auth_proxy']['enabled'] %>
+header_name = <%= node['grafana']['auth_proxy']['header_name'] %>
+header_property = <%= node['grafana']['auth_proxy']['header_property'] %>
+auto_sign_up = <%= node['grafana']['auth_proxy']['auto_sign_up'] %>
+
+#################################### SMTP / Emailing ##########################
+[smtp]
+enabled = <%= node['grafana']['smtp']['enabled'] %>
+host = <%= node['grafana']['smtp']['host'] %>
+user = <%= node['grafana']['smtp']['user'] %>
+password = <%= node['grafana']['smtp']['password'] %>
+cert_file = <%= node['grafana']['smtp']['cert_file'] %>
+key_file = <%= node['grafana']['smtp']['key_file'] %>
+skip_verify = <%= node['grafana']['smtp']['skip_verify'] %>
+from_address = <%= node['grafana']['smtp']['from_address'] %>
+
+[emails]
+welcome_email_on_sign_up = <%= node['grafana']['email']['welcome_email'] %>
+
 #################################### Logging ##########################
 [log]
 # Either "console", "file", default is "console"
