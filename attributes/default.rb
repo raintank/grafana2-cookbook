@@ -71,6 +71,7 @@ default['grafana']['smtp']['from_address'] = 'admin@grafana.localhost'
 
 ### EMAIL ###
 default['grafana']['email']['welcome_email'] = false
+default['grafana']['email']['templates_pattern'] = 'emails/*.html'
 
 ### SESSION ###
 default['grafana']['session_type'] = 'memory' # Either 'memory', 'file', 'mysql', or 'postgres'
