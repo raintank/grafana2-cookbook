@@ -247,4 +247,9 @@ host = <%= node['grafana']['elasticsearch_host'] %>
 [dashboards.json]
 enabled = true
 path = <%= node['grafana']['litmus_path'] %>
+
+# telemetry
+[telemetry]
+enabled = <%= node['grafana']['use_statsd'] %>
+statsd_addr = <%= node['grafana']['statsd_addr'] %>
 <% end %>

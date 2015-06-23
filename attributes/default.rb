@@ -112,3 +112,7 @@ default['grafana']['graphite_port'] = 8888
 default['grafana']['elasticsearch_host'] = 'localhost'
 # TODO: there *has* to be a better way to specify this path.
 default['grafana']['litmus_path'] = '/usr/share/grafana/public/plugins/raintank/dashboards/litmus'
+
+### TELEMETRY
+default['grafana']['use_statsd'] = false
+default['grafana']['statsd_addr'] = "localhost:8125"
