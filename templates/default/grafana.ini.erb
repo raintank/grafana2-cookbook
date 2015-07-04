@@ -250,7 +250,7 @@ path = <%= node['grafana']['litmus_path'] %>
 
 # telemetry
 [telemetry]
-enabled = <%= node['grafana']['use_statsd'] %>
+statsd_enabled = <%= node['grafana']['use_statsd'] %>
 statsd_addr = <%= node['grafana']['statsd_addr'] %>
 <% if node['grafana']['statsd_type'] %>
 statsd_type = <%= node['grafana']['statsd_type'] %>
