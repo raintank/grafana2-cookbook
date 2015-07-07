@@ -252,4 +252,12 @@ path = <%= node['grafana']['litmus_path'] %>
 [telemetry]
 statsd_enabled = <%= node['grafana']['use_statsd'] %>
 statsd_addr = <%= node['grafana']['statsd_addr'] %>
+
+<% if node['grafana']['use_profiling'] %>
+# profiling
+profile_heap_MB = <%= node['grafana']['profile_heap_mb'] %>
+profile_heap_dir = <%= node['grafana']['profile_heap_dir'] %>
+profile_heap_wait = <%= node['grafana']['profile_heap_wait'] %>
+<% end %>
+
 <% end %>

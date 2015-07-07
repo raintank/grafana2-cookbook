@@ -19,6 +19,15 @@ if node['grafana']['ssl_cert_content'] && node['grafana']['ssl_key_content']
   end
 end
 
+if node['grafana']['use_profiling']
+  directory node['grafana']['profile_heap_dir'] do
+    mode "0755"
+    owner node['grafana']['user']
+    group node['grafana']['group']
+    action :create
+  end
+end
+
 template node['grafana']['conf_ini'] do
   source 'grafana.ini.erb'
   mode '600'
