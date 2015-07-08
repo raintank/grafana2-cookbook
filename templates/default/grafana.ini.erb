@@ -196,6 +196,14 @@ from_address = <%= node['grafana']['smtp']['from_address'] %>
 welcome_email_on_sign_up = <%= node['grafana']['email']['welcome_email'] %>
 templates_pattern = <%= node['grafana']['email']['templates_pattern'] %>
 
+#################################### Alerting ##########################
+[alerting]
+queue_ticks_size = <%= node['grafana']['alerting']['queue_ticks_size'] %>
+queue_jobs_size = <%= node['grafana']['alerting']['queue_jobs_size'] %>
+executor_lru_size = <%= node['grafana']['alerting']['executor_lru_size'] %>
+enable_scheduler = <%= node['grafana']['alerting']['enable_scheduler'] %>
+executors = <%= node['grafana']['alerting']['executors'] %>
+
 #################################### Logging ##########################
 [log]
 # Either "console", "file", default is "console"
