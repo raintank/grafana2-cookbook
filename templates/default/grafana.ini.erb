@@ -203,6 +203,7 @@ queue_jobs_size = <%= node['grafana']['alerting']['queue_jobs_size'] %>
 executor_lru_size = <%= node['grafana']['alerting']['executor_lru_size'] %>
 enable_scheduler = <%= node['grafana']['alerting']['enable_scheduler'] %>
 executors = <%= node['grafana']['alerting']['executors'] %>
+write_individual_alert_results = <%= node['grafana']['alerting']['individual_alerts'] %>
 
 #################################### Logging ##########################
 [log]

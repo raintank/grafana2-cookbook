@@ -129,3 +129,4 @@ default['grafana']['alerting']['queue_jobs_size'] = 1000
 default['grafana']['alerting']['executor_lru_size'] = 10000
 default['grafana']['alerting']['enable_scheduler'] = true
 default['grafana']['alerting']['executors'] = 10
+default['grafana']['alerting']['individual_alerts'] = false
