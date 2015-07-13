@@ -116,3 +116,17 @@ default['grafana']['litmus_path'] = '/usr/share/grafana/public/plugins/raintank/
 ### TELEMETRY
 default['grafana']['use_statsd'] = false
 default['grafana']['statsd_addr'] = "localhost:8125"
+
+### PROFILING
+default['grafana']['use_profiling'] = false
+default['grafana']['profile_heap_mb'] = 4000
+default['grafana']['profile_heap_dir'] = '/tmp/grafana-profile'
+default['grafana']['profile_heap_wait'] = 3600
+
+### ALERTING
+default['grafana']['alerting']['queue_ticks_size'] = 20
+default['grafana']['alerting']['queue_jobs_size'] = 1000
+default['grafana']['alerting']['executor_lru_size'] = 10000
+default['grafana']['alerting']['enable_scheduler'] = true
+default['grafana']['alerting']['executors'] = 10
+default['grafana']['alerting']['individual_alerts'] = false
