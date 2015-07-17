@@ -13,6 +13,7 @@ default['grafana']['ssl_cert_file'] = '/etc/grafana/ssl.crt'
 default['grafana']['ssl_key_file'] = '/etc/grafana/ssl.key'
 default['grafana']['ssl_cert_content'] = nil
 default['grafana']['ssl_key_content'] = nil
+default['grafana']['instance_id'] = 'default'
 
 ### PATHS ###
 default['grafana']['log_dir'] = '/var/log/grafana'
