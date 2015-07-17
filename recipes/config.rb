@@ -1,5 +1,7 @@
 cert_file = cert_key = nil
 
+node.default['grafana']['instance_id'] = node['hostname']
+
 if node['grafana']['ssl_cert_content'] && node['grafana']['ssl_key_content']
   cert_file = node['grafana']['ssl_cert_file']
   cert_key = node['grafana']['ssl_key_file']
