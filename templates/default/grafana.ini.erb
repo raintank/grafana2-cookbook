@@ -5,6 +5,9 @@
 
 app_mode = <%= node['grafana']['app_mode'] %>
 
+# all grafana instances in your environment should have a unique instance_id
+instance_id = <%= node['grafana']['instance_id'] %>
+
 #################################### Paths ####################################
 [paths]
 # Path to where grafana can store temp files, sessions, and the sqlite3 db (if that is useD)
