@@ -201,8 +201,9 @@ templates_pattern = <%= node['grafana']['email']['templates_pattern'] %>
 
 #################################### Alerting ##########################
 [alerting]
-queue_ticks_size = <%= node['grafana']['alerting']['queue_ticks_size'] %>
-queue_jobs_size = <%= node['grafana']['alerting']['queue_jobs_size'] %>
+tickqueue_size = <%= node['grafana']['alerting']['queue_ticks_size'] %>
+internal_jobqueue_size = <%= node['grafana']['alerting']['queue_jobs_size'] %>
+pre_amqp_jobqueue_size = <%= node['grafana']['alerting']['pre_amqp_jobs_size'] %>
 executor_lru_size = <%= node['grafana']['alerting']['executor_lru_size'] %>
 enable_scheduler = <%= node['grafana']['alerting']['enable_scheduler'] %>
 executors = <%= node['grafana']['alerting']['executors'] %>

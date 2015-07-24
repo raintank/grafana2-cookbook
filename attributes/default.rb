@@ -128,6 +128,7 @@ default['grafana']['profile_heap_wait'] = 3600
 ### ALERTING
 default['grafana']['alerting']['queue_ticks_size'] = 20
 default['grafana']['alerting']['queue_jobs_size'] = 1000
+default['grafana']['alerting']['pre_amqp_jobs_size'] = 1000
 default['grafana']['alerting']['executor_lru_size'] = 10000
 default['grafana']['alerting']['enable_scheduler'] = false
 default['grafana']['alerting']['executors'] = 10
