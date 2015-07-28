@@ -8,6 +8,7 @@ default['grafana']['user'] = 'grafana'
 default['grafana']['group'] = 'grafana'
 default['grafana']['conf_ini'] = '/etc/grafana/grafana.ini'
 default['grafana']['repo_url'] = 'https://packagecloud.io'
+default['grafana']['repo_name'] = 'raintank/raintank'
 default['grafana']['version'] = '' # '2.0.2-1' If you really want to pin
 default['grafana']['ssl_cert_file'] = '/etc/grafana/ssl.crt'
 default['grafana']['ssl_key_file'] = '/etc/grafana/ssl.key'

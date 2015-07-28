@@ -12,7 +12,7 @@ else
   "rpm"
 end
 
-packagecloud_repo "ct/raintank" do
+packagecloud_repo node['grafana']['repo_name'] do
   type repo_type
 end
 
