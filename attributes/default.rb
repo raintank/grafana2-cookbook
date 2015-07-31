@@ -127,6 +127,8 @@ default['grafana']['profile_heap_dir'] = '/tmp/grafana-profile'
 default['grafana']['profile_heap_wait'] = 3600
 
 ### ALERTING
+default['grafana']['alerting']['enabled'] = false
+default['grafana']['alerting']['handler'] = "amqp"
 default['grafana']['alerting']['queue_ticks_size'] = 20
 default['grafana']['alerting']['queue_jobs_size'] = 1000
 default['grafana']['alerting']['pre_amqp_jobs_size'] = 1000
