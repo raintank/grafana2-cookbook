@@ -230,8 +230,10 @@ level = <%= node['grafana']['log_level'] %>
 # For "file" mode only
 [log.file]
 ;level =
+<% if node['grafana']['no_log_rotate'] %>
 # This enables automated log rotate(switch of following options), default is true
-;log_rotate = true
+log_rotate = false
+<% end %>
 
 # Max line number of single file, default is 1000000
 ;max_lines = 1000000
