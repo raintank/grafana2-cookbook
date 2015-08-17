@@ -84,6 +84,7 @@ default['grafana']['session_life_time'] = 84600
 
 ### LOGGING ###
 default['grafana']['log_level'] = 'Info' # Either "Trace", "Debug", "Info", "Warn", "Error", "Critical"
+default['grafana']['log_mode'] = "console"
 
 ### REPORTING ###
 default['grafana']['reporting_enabled'] = true
@@ -136,3 +137,4 @@ default['grafana']['alerting']['executor_lru_size'] = 10000
 default['grafana']['alerting']['enable_scheduler'] = false
 default['grafana']['alerting']['executors'] = 10
 default['grafana']['alerting']['individual_alerts'] = false
+

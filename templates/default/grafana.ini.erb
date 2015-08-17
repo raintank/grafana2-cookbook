@@ -215,7 +215,7 @@ write_individual_alert_results = <%= node['grafana']['alerting']['individual_ale
 [log]
 # Either "console", "file", default is "console"
 # Use comma to separate multiple modes, e.g. "console, file"
-;mode = console, file
+mode = <%= node['grafana']['log_mode'] %>
 
 # Buffer length of channel, keep it as it is if you don't know what it is.
 ;buffer_len = 10000
@@ -225,11 +225,12 @@ level = <%= node['grafana']['log_level'] %>
 
 # For "console" mode only
 [log.console]
-;level =
+level = <%= node['grafana']['log_level_console'] %>
 
 # For "file" mode only
 [log.file]
-;level =
+level = <%= node['grafana']['log_level_file'] %>
+
 <% if node['grafana']['no_log_rotate'] %>
 # This enables automated log rotate(switch of following options), default is true
 log_rotate = false
