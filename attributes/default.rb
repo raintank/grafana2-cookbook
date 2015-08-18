@@ -84,6 +84,8 @@ default['grafana']['session_life_time'] = 84600
 
 ### LOGGING ###
 default['grafana']['log_level'] = 'Info' # Either "Trace", "Debug", "Info", "Warn", "Error", "Critical"
+default['grafana']['log_level_console' ] = node['grafana']['log_level']
+default['grafana']['log_level_file' ] = node['grafana']['log_level']
 default['grafana']['log_mode'] = "console"
 
 ### REPORTING ###
