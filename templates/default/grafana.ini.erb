@@ -57,7 +57,7 @@ cert_key = <%= @cert_key %>
 [database]
 # Either "mysql", "postgres" or "sqlite3", it's your choice
 type = <%= node['grafana']['db_type'] %>
-host = <%= node['grafana']['db_host'] %>:<%= node['grafana']['db_port'] %>
+host = <%= @db_host %>:<%= node['grafana']['db_port'] %>
 name = <%= node['grafana']['db_name'] %>
 user = <%= node['grafana']['db_user'] %>
 password = <%= node['grafana']['db_password'] %>
@@ -80,7 +80,7 @@ provider = <%= node['grafana']['session_type'] %>
 # file: session dir path, is relative to grafana data_path
 # redis: config like redis server addr, poolSize, password, e.g. `127.0.0.1:6379,100,grafana`
 # mysql: go-sql-driver/mysql dsn config string, e.g. `user:passwordnode['grafana']['tcp(127.0.0.1)/database_name`
-provider_config = <%= node['grafana']['db_user'] %>:<%= node['grafana']['db_password'] %>@tcp(<%= node['grafana']['db_host'] %>:<%= node['grafana']['db_port'] %>)/<%= node['grafana']['db_name'] %>
+provider_config = <%= node['grafana']['db_user'] %>:<%= node['grafana']['db_password'] %>@tcp(<%= @db_host %>:<%= node['grafana']['db_port'] %>)/<%= node['grafana']['db_name'] %>
 
 # Session cookie name
 cookie_name = <%= node['grafana']['cookie_name'] %>
@@ -251,15 +251,15 @@ log_rotate = false
 #################################### AMPQ Event Publisher ##########################
 [event_publisher]
 enabled = <%= node['grafana']['event_publish'] %>
-rabbitmq_url = amqp://<%= node['grafana']['rabbitmq_host'] %>/
+rabbitmq_url = amqp://<%= @rabbitmq_host %>/
 exchange = <%= node['grafana']['event_exchange'] %>
 
 <% if node['grafana']['raintank'] %>
 [raintank]
-graphite_url = http://<%= node['grafana']['graphite_host'] %>:<%= node['grafana']['graphite_port'] %>/
+graphite_url = http://<%= @graphite_host %>:<%= node['grafana']['graphite_port'] %>/
 
 [elasticsearch]
-host = <%= node['grafana']['elasticsearch_host'] %>
+host = <%= @elasticsearch_host %>
 
 #################################### Dashboard JSON files ##########################
 [dashboards.json]

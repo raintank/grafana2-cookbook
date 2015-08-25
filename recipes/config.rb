@@ -30,6 +30,11 @@ if node['grafana']['use_profiling']
   end
 end
 
+elasticsearch_host = find_haproxy || node['grafana']['elasticsearch_host']
+db_host = find_haproxy || node['grafana']['db_host']
+rabbitmq_host = find_haproxy || node['grafana']['rabbitmq_host']
+graphite_host = find_haproxy || node['grafana']['graphite_host']
+
 template node['grafana']['conf_ini'] do
   source 'grafana.ini.erb'
   mode '600'
@@ -37,7 +42,11 @@ template node['grafana']['conf_ini'] do
   group node['grafana']['group']
   variables({
     cert_file: cert_file,
-    cert_key: cert_key
+    cert_key: cert_key,
+    db_host: db_host,
+    elasticsearch_host: elasticsearch_host,
+    rabbitmq_host: rabbitmq_host,
+    graphite_host: graphite_host
   })
   notifies :restart, 'service[grafana-server]', :delayed
 end
