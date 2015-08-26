@@ -103,7 +103,7 @@ reporting_enabled = <%= node['grafana']['reporting_enabled'] %>
 <% if node['grafana']['ga_id'] %>
 google_analytics_ua_id = <%= node['grafana']['ga_id'] %>
 <% end %>
-<if node['grafana']['tag_manager_id'] %>
+<% if node['grafana']['tag_manager_id'] %>
 google_tag_manager_id = <%= node['grafana']['tag_manager_id'] %>
 <% end %>
 
