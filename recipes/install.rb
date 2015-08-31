@@ -16,19 +16,25 @@ packagecloud_repo node['grafana']['repo_name'] do
   type repo_type
 end
 
+pkg_action = if node['grafana']['version'].nil?
+  :upgrade
+else
+  :install
+end
+
 case platform_family
 when 'debian'
   package 'grafana' do
     version node['grafana']['version']
     options package_options
-    action :upgrade
+    action pkg_action
   end
 else
   yum_package 'grafana' do
     version node['grafana']['version']
     options package_options
     allow_downgrade true
-    action :upgrade
+    action pkg_action
   end
 end
 
