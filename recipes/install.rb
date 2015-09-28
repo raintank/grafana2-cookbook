@@ -16,10 +16,13 @@ packagecloud_repo node['grafana']['repo_name'] do
   type repo_type
 end
 
-pkg_action = if node['grafana']['version'].nil?
-  :upgrade
+if node['grafana']['version'].nil? || node['grafana']['version'].empty?
+  pkg_action = :upgrade
+  if repo_type == "deb"
+    package_options = '--force-yes -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"'
+  end
 else
-  :install
+  pkg_action = :install
 end
 
 case platform_family
