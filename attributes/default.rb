@@ -141,3 +141,20 @@ default['grafana']['alerting']['enable_scheduler'] = false
 default['grafana']['alerting']['executors'] = 10
 default['grafana']['alerting']['individual_alerts'] = false
 
+### QUOTAS
+default['grafana']['quota']['enabled'] = true
+default['grafana']['quota']['org_user'] = 10
+default['grafana']['quota']['org_dashboard'] = 100
+default['grafana']['quota']['org_data_source'] = 10
+default['grafana']['quota']['org_api_key'] = 10
+default['grafana']['quota']['org_endpoint'] = 10
+default['grafana']['quota']['org_collector'] = 10
+default['grafana']['quota']['user_org'] = 10
+default['grafana']['quota']['global_user'] = -1
+default['grafana']['quota']['global_org'] = -1
+default['grafana']['quota']['global_dashboard'] = -1
+default['grafana']['quota']['global_data_source'] = -1
+default['grafana']['quota']['global_api_key'] = -1
+default['grafana']['quota']['global_endpoint'] = -1
+default['grafana']['quota']['global_collector'] = -1
+default['grafana']['quota']['global_session'] = -1

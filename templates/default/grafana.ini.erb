@@ -284,4 +284,50 @@ profile_heap_dir = <%= node['grafana']['profile_heap_dir'] %>
 profile_heap_wait = <%= node['grafana']['profile_heap_wait'] %>
 <% end %>
 
+[quota]
+enabled = <%= node['grafana']['quota']['enabled'] %>
+
+#### set quotas to -1 to make unlimited. ####
+# limit number of users per Org.
+org_user = <%= node['grafana']['quota']['org_user'] %>
+
+# limit number of dashboards per Org.
+org_dashboard = <%= node['grafana']['quota']['org_dashboard'] %>
+
+# limit number of data_sources per Org.
+org_data_source = <%= node['grafana']['quota']['org_data_source'] %>
+
+# limit number of api_keys per Org.
+org_api_key = <%= node['grafana']['quota']['org_api_key'] %>
+
+# limit number of endpoints per Org.
+org_endpoint = <%= node['grafana']['quota']['org_endpoint'] %>
+
+# limit number of collectorsper Org.
+org_collector = <%= node['grafana']['quota']['org_collector'] %>
+
+# limit number of orgs a user can create.
+user_org = <%= node['grafana']['quota']['user_org'] %>
+
+# Global limit of users.
+global_user = <%= node['grafana']['quota']['global_user'] %>
+
+# global limit of orgs.
+global_org = <%= node['grafana']['quota']['global_org'] %>
+
+# global limit of dashboards
+global_dashboard = <%= node['grafana']['quota']['global_dashboard'] %>
+
+# global limit of api_keys
+global_api_key =  <%= node['grafana']['quota']['global_api_key'] %>
+
+# golbal limit of endpoints
+global_endpoint =  <%= node['grafana']['quota']['global_endpoint'] %>
+
+# golbal limit of collectors
+global_collector =  <%= node['grafana']['quota']['global_collector'] %>
+
+# global limit on number of logged in users.
+global_session =  <%= node['grafana']['quota']['global_session'] %>
+
 <% end %>
