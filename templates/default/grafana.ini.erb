@@ -229,6 +229,7 @@ level = <%= node['grafana']['log_level'] %>
 # For "console" mode only
 [log.console]
 level = <%= node['grafana']['log_level_console'] %>
+formatting = <%= node['grafana']['log_formatting'] %>
 
 # For "file" mode only
 [log.file]

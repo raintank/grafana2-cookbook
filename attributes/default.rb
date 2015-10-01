@@ -87,6 +87,7 @@ default['grafana']['log_level'] = 'Info' # Either "Trace", "Debug", "Info", "War
 default['grafana']['log_level_console' ] = node['grafana']['log_level']
 default['grafana']['log_level_file' ] = node['grafana']['log_level']
 default['grafana']['log_mode'] = "console"
+default['grafana']['log_formatting'] = true
 
 ### REPORTING ###
 default['grafana']['reporting_enabled'] = true
