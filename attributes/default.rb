@@ -159,3 +159,13 @@ default['grafana']['quota']['global_api_key'] = -1
 default['grafana']['quota']['global_endpoint'] = -1
 default['grafana']['quota']['global_collector'] = -1
 default['grafana']['quota']['global_session'] = -1
+
+# METRICS PUBLISHING
+default['grafana']['metric_publish_enabled'] = true
+default['grafana']['metric_publish_nsqd_addr'] = "localhost:4150"
+default['grafana']['metric_publish_topic'] = "metrics"
+
+# COLLECTOR EVENTS PUBLISHING
+default['grafana']['collector_event_publish_enabled'] = true
+default['grafana']['collector_event_publish_nsqd_addr'] = "localhost:4150"
+default['grafana']['collector_event_publish_topic'] = "probe_events"

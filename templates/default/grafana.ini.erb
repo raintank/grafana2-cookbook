@@ -285,6 +285,16 @@ profile_heap_dir = <%= node['grafana']['profile_heap_dir'] %>
 profile_heap_wait = <%= node['grafana']['profile_heap_wait'] %>
 <% end %>
 
+[metric_publisher]
+enabled = <%= node['grafana']['metric_publish_enabled'] %>
+nsqd_addr = <%= node['grafana']['metric_publish_nsqd_addr'] %>
+topic = <%= node['grafana']['metric_publish_topic'] %>
+
+[collector_event_publisher]
+enabled = <%= node['grafana']['collector_event_publish_enabled'] %>
+nsqd_addr = <%= node['grafana']['collector_event_publish_nsqd_addr'] %>
+topic = <%= node['grafana']['collector_event_publish_topic'] %>
+
 [quota]
 enabled = <%= node['grafana']['quota']['enabled'] %>
 
