@@ -37,6 +37,7 @@ graphite_host = find_haproxy || node['grafana']['graphite_host']
 
 template node['grafana']['conf_ini'] do
   source 'grafana.ini.erb'
+  cookbook node['grafana']['template_cookbook']
   mode '600'
   owner node['grafana']['user']
   group node['grafana']['group']

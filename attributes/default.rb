@@ -15,6 +15,7 @@ default['grafana']['ssl_key_file'] = '/etc/grafana/ssl.key'
 default['grafana']['ssl_cert_content'] = nil
 default['grafana']['ssl_key_content'] = nil
 default['grafana']['instance_id'] = 'default'
+default['grafana']['template_cookbook'] = 'grafana2'
 
 ### PATHS ###
 default['grafana']['log_dir'] = '/var/log/grafana'
