@@ -14,6 +14,8 @@ end
 
 packagecloud_repo node['grafana']['repo_name'] do
   type repo_type
+  force_os node['grafana']['repo_os']
+  force_dist node['grafana']['repo_dist']
 end
 
 if node['grafana']['version'].nil? || node['grafana']['version'].empty?
