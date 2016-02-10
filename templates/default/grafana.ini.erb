@@ -264,6 +264,7 @@ graphite_url = http://<%= @graphite_host %>:<%= node['grafana']['graphite_port']
 
 [elasticsearch]
 host = <%= @elasticsearch_host %>
+wildcard_events = <%= node['grafana']['wildcard_events'] %>
 
 #################################### Dashboard JSON files ##########################
 [dashboards.json]
