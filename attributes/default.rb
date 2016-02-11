@@ -117,6 +117,8 @@ default['grafana']['raintank'] = true
 default['grafana']['graphite_host'] = 'localhost'
 default['grafana']['graphite_port'] = 8888
 default['grafana']['elasticsearch_host'] = 'localhost'
+default['grafana']['events_elasticsearch_host'] = 'localhost'
+default['grafana']['events_elasticsearch_port'] = 9200
 default['grafana']['wildcard_events'] = true
 # TODO: there *has* to be a better way to specify this path.
 default['grafana']['litmus_path'] = '/usr/share/grafana/public/plugins/raintank/dashboards/litmus'

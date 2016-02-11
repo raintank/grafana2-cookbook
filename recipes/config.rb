@@ -31,6 +31,7 @@ if node['grafana']['use_profiling']
 end
 
 elasticsearch_host = find_haproxy || node['grafana']['elasticsearch_host']
+events_elasticsearch_host = find_haproxy || node['grafana']['events_elasticsearch_host']
 db_host = find_haproxy || node['grafana']['db_host']
 rabbitmq_host = find_haproxy || node['grafana']['rabbitmq_host']
 graphite_host = find_haproxy || node['grafana']['graphite_host']
@@ -46,6 +47,7 @@ template node['grafana']['conf_ini'] do
     cert_key: cert_key,
     db_host: db_host,
     elasticsearch_host: elasticsearch_host,
+    events_elasticsearch_host: events_elasticsearch_host,
     rabbitmq_host: rabbitmq_host,
     graphite_host: graphite_host
   })
