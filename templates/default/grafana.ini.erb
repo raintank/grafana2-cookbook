@@ -261,7 +261,7 @@ exchange = <%= node['grafana']['event_exchange'] %>
 <% if node['grafana']['raintank'] %>
 [raintank]
 graphite_url = http://<%= @graphite_host %>:<%= node['grafana']['graphite_port'] %>/
-elasticsearch_url = http://<%= @events_elasticsearch_host %>:<%= node['grafana'['events_elasticsearch_port'] %>/
+elasticsearch_url = http://<%= @events_elasticsearch_host %>:<%= node['grafana']['events_elasticsearch_port'] %>/
 
 [elasticsearch]
 host = <%= @elasticsearch_host %>

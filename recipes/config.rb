@@ -37,7 +37,7 @@ rabbitmq_host = find_haproxy || node['grafana']['rabbitmq_host']
 graphite_host = find_haproxy || node['grafana']['graphite_host']
 
 template node['grafana']['conf_ini'] do
-  source 'grafana.ini.erb'
+  source node['grafana']['template_file']
   cookbook node['grafana']['template_cookbook']
   mode '600'
   owner node['grafana']['user']
