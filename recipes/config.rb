@@ -53,3 +53,19 @@ template node['grafana']['conf_ini'] do
   })
   notifies :restart, 'service[grafana-server]', :delayed
 end
+
+directory node['grafana']['log_dir'] do
+  owner node['grafana']['user']
+  group node['grafana']['group']
+  mode "0755"
+  recursive true
+  action :create
+end
+
+directory node['grafana']['data_dir'] do
+  owner node['grafana']['user']
+  group node['grafana']['group']
+  mode "0755"
+  recursive true
+  action :create
+end
