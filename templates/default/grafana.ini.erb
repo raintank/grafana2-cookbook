@@ -344,3 +344,13 @@ global_collector =  <%= node['grafana']['quota']['global_collector'] %>
 global_session =  <%= node['grafana']['quota']['global_session'] %>
 
 <% end %>
+
+[metrics]
+enabled = <%= node['grafana']['metrics']['enabled'] %>
+interval_seconds = <%= node['grafana']['metrics']['interval_seconds'] %>
+
+<% if node['grafana']['metrics']['graphite'] %>
+[metrics.graphite]
+address = node['grafana']['metrics']['graphite']['addess']
+prefix = node['grafana']['metrics']['graphite']['prefix']
+<% end %>
